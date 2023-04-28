@@ -73,7 +73,7 @@ async def gen_thumb(videoid, user_id):
             background = enhancer.enhance(0.6)
             image2 = background
                                                                                             
-            circle = Image.open("assets/circle.png")
+            circle = Image.open(f"AnonX/assets/anonx.png")
 
             # changing circle color
             im = circle
@@ -105,10 +105,10 @@ async def gen_thumb(videoid, user_id):
             image2.paste(circle, (0,0), mask = circle)
 
             # fonts
-            font1 = ImageFont.truetype('assets/font.ttf', 30)
-            font2 = ImageFont.truetype('assets/font2.ttf', 70)
-            font3 = ImageFont.truetype('assets/font2.ttf', 40)
-            font4 = ImageFont.truetype('assets/font2.ttf', 35)
+            font1 = ImageFont.truetype("AnonX/assets/font.ttf', 30)
+            font2 = ImageFont.truetype("AnonX/assets/font.ttf', 70)
+            font3 = ImageFont.truetype("AnonX/assets/font.ttf', 40)
+            font4 = ImageFont.truetype("AnonX/assets/font.ttf', 35)
 
             image4 = ImageDraw.Draw(image2)
             image4.text((10, 10), "VENOM x MUSIC", fill="white", font = font1, align ="left") 
@@ -180,7 +180,7 @@ async def gen_qthumb(videoid, user_id):
             background = enhancer.enhance(0.6)
             image2 = background
                                                                                             
-            circle = Image.open("assets/circle.png")
+            circle = Image.open(f"AnonX/assets/anonx.png")
 
             # changing circle color
             im = circle
@@ -212,10 +212,10 @@ async def gen_qthumb(videoid, user_id):
             image2.paste(circle, (0,0), mask = circle)
 
             # fonts
-            font1 = ImageFont.truetype('assets/font.ttf', 30)
-            font2 = ImageFont.truetype('assets/font2.ttf', 70)
-            font3 = ImageFont.truetype('assets/font2.ttf', 40)
-            font4 = ImageFont.truetype('assets/font2.ttf', 35)
+            font1 = ImageFont.truetype("AnonX/assets/font.ttf', 30)
+            font2 = ImageFont.truetype("AnonX/assets/font.ttf', 70)
+            font3 = ImageFont.truetype("AnonX/assets/font.ttf', 40)
+            font4 = ImageFont.truetype("AnonX/assets/font.ttf', 35)
 
             image4 = ImageDraw.Draw(image2)
             image4.text((10, 10), "VENOM x MUSIC", fill="white", font = font1, align ="left") 
