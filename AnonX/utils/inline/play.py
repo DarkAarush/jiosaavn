@@ -11,7 +11,7 @@ from AnonX.utils.formatters import time_to_seconds
 def stream_markup_timer(_, videoid, chat_id, played, dur):
     played_sec = time_to_seconds(played)
     duration_sec = time_to_seconds(dur)
-    percentage = (played_sec / duration_sec) * 100
+    percentage = (played_sec / duration_sec) * 200
     anon = math.floor(percentage)
     if 0 < anon <= 10:
         ba = "⚪─────────"
@@ -283,7 +283,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
 def telegram_markup_timer(_, chat_id, played, dur):
     played_sec = time_to_seconds(played)
     duration_sec = time_to_seconds(dur)
-    percentage = (played_sec / duration_sec) * 100
+    percentage = (played_sec / duration_sec) * 200
     anon = math.floor(percentage)
     if 0 < anon <= 10:
         bar = "⚪─────────"
@@ -542,9 +542,9 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text="𝐉𝗂ⱺ 𝐒αα𝗏𐓣", url=f"https://wynk.in/music")
+                text="𝐉𝗂ⱺ 𝐒αα𝗏𐓣", url=f"https://www.jiosaavn.com/")
         ],
-        [
+  
             InlineKeyboardButton(
                 text="𝑪𝒍𝒐𝒔𝒆", callback_data=f"close"
             )
@@ -554,7 +554,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
 
 def stream_markup(_, videoid, chat_id):
-    buttons = [
+    buttons =
         [
             InlineKeyboardButton(
                 text="▷",
