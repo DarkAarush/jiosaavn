@@ -76,7 +76,7 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://images.app.goo.gl/rcNY1uNxT7BtMZz89")
+START_IMG_URL = getenv("START_IMG_URL", "https://images.app.goo.gl/h5DMKrHyzMSRhV3o9")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
@@ -89,13 +89,13 @@ GLOBAL_IMG_URL = "https://images.app.goo.gl/rcNY1uNxT7BtMZz89"
 
 STATS_IMG_URL = "https://images.app.goo.gl/rcNY1uNxT7BtMZz89"
 
-TELEGRAM_AUDIO_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTerDS_Y-E21fTDJHNcpkuUHEA152aQUUxvcQ&usqp=CAU"
+TELEGRAM_AUDIO_URL = "https://images.app.goo.gl/h5DMKrHyzMSRhV3o9"
 
-TELEGRAM_VIDEO_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
+TELEGRAM_VIDEO_URL = "https://images.app.goo.gl/h5DMKrHyzMSRhV3o9"
 
-STREAM_IMG_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
+STREAM_IMG_URL = "https://images.app.goo.gl/h5DMKrHyzMSRhV3o9"
 
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
+SOUNCLOUD_IMG_URL = "https://images.app.goo.gl/h5DMKrHyzMSRhV3o9"
 
 YOUTUBE_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
