@@ -138,7 +138,7 @@ async def gen_thumb(videoid, user_id):
                     f"{para[0]}",
                     fill="white",
                     stroke_width=2,
-                    stroke_fill="red",
+                    stroke_fill="green",
                     font=font,
                 )
             if para[1]:
@@ -148,7 +148,7 @@ async def gen_thumb(videoid, user_id):
                     f"{para[1]}",
                     fill="white",
                     stroke_width=2,
-                    stroke_fill="red",
+                    stroke_fill="green",
                     font=font,
                 )
         except:
