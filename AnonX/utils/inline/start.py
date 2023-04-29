@@ -10,7 +10,7 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         [
             InlineKeyboardButton(
                 text="𝐀ᑯᑯ 𝐉𝗂ⱺ 𝐒αα𝗏𐓣 𝚰𐓣 𝐆𝗋ⱺυρ ",
-                url=f"https://t.me/Jiosaavn_TetrisBot?startgroup=true",
+                url=f"https://t.me/JiosaavnTetrisbot?startgroup=true",
             )
         ],
         [
