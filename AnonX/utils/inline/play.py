@@ -36,9 +36,9 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
 
 #bar of wynk---------------------------------------
     if 0 < anon <= 1:
-        bar = "𝐉𝗂ⱺ 𝐒αα𝗏𐓣 𝑴𝒖𝒔𝒊𝒄"
-    elif 1 < anon < 2:
-        bar = "𝐁𝖾𝗌𝗍 𝐅𝖾α𝗍υ𝗋𝖾𝗌"
+        bar = "𝐉𝗂ⱺ 𝐒αα𝗏𐓣 𝑴𝒖𝒔𝒊𝒄 𝐁𝖾𝗌𝗍 𝐅𝖾α𝗍υ𝗋𝖾𝗌"
+    elif 1 <= anon < 2:
+        bar = "𝐉𝗂ⱺ 𝐒αα𝗏𐓣 𝐅α𝗏ⱺ𝗋𝗂𝗍𝖾 ρᥣα𝗒ᥣ𝗂𝗌𝗍"
     elif 2 <= anon < 3:
         bar = "𝐌𝗂ᥣᥣ𝗂ⱺ𐓣 𝐒ⱺ𐓣𝗀𝗌"
     elif 3 <= anon < 4:
@@ -307,10 +307,8 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ba = "━━━━━━━━━⚪"
 
 # Wynk bar-----------------------------------------------------------
-    if 0 < anon <= 1:
-        bar = "𝐉𝗂ⱺ 𝐒αα𝗏𐓣 𝑴𝒖𝒔𝒊𝒄"
-    elif 1 < anon < 2:
-        bar = "𝐁𝖾𝗌𝗍 𝐅𝖾α𝗍υ𝗋𝖾𝗌"
+    if 0 < anon <= 2:
+        bar = "𝐉𝗂ⱺ 𝐒αα𝗏𐓣 𝑴𝒖𝒔𝒊𝒄 𝐁𝖾𝗌𝗍 𝐅𝖾α𝗍υ𝗋𝖾𝗌"
     elif 2 <= anon < 3:
         bar = "𝐌𝗂ᥣᥣ𝗂ⱺ𐓣 𝐒ⱺ𐓣𝗀𝗌"
     elif 3 <= anon < 4:
@@ -542,9 +540,9 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text="𝐉𝗂ⱺ 𝐒αα𝗏𐓣", url=f"https://www.jiosaavn.com/")
+                text="𝐉𝗂ⱺ 𝐒αα𝗏𐓣", url=f"https://wynk.in/music")
         ],
-  
+        [
             InlineKeyboardButton(
                 text="𝑪𝒍𝒐𝒔𝒆", callback_data=f"close"
             )
@@ -554,7 +552,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
 
 def stream_markup(_, videoid, chat_id):
-    buttons =
+    buttons = [
         [
             InlineKeyboardButton(
                 text="▷",
