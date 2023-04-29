@@ -111,7 +111,7 @@ async def gen_thumb(videoid, user_id):
             font4 = ImageFont.truetype("AnonX/assets/font.ttf', 35)
 
             image4 = ImageDraw.Draw(image2)
-            image4.text((10, 10), "VENOM x MUSIC", fill="white", font = font1, align ="left") 
+            image4.text((10, 10), "Jio Saavn", fill="white", font = font1, align ="left") 
             image4.text((670, 150), "NOW PLAYING", fill="white", font = font2, stroke_width=2, stroke_fill="white", align ="left") 
 
             # title
@@ -218,7 +218,7 @@ async def gen_qthumb(videoid, user_id):
             font4 = ImageFont.truetype("AnonX/assets/font.ttf', 35)
 
             image4 = ImageDraw.Draw(image2)
-            image4.text((10, 10), "VENOM x MUSIC", fill="white", font = font1, align ="left") 
+            image4.text((10, 10), "Jio Saavn", fill="white", font = font1, align ="left") 
             image4.text((670, 150), "NOW PLAYING", fill="white", font = font2, stroke_width=2, stroke_fill="white", align ="left") 
 
             # title
