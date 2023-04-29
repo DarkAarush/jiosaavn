@@ -35,7 +35,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ba = "━━━━━━━━━⚪"
 
 #bar of wynk---------------------------------------
-     if 0 < anon <= 1:
+    if 0 < anon <= 1:
         bar = "𝐉𝗂ⱺ 𝐒αα𝗏𐓣 𝑴𝒖𝒔𝒊𝒄"
     elif 1 < anon < 2:
         bar = "𝐁𝖾𝗌𝗍 𝐅𝖾α𝗍υ𝗋𝖾𝗌"
