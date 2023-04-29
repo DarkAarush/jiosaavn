@@ -76,7 +76,7 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "images (5).jpeg")
+START_IMG_URL = getenv("START_IMG_URL", "https://static.apkdone.me/wp-content/uploads/2020/10/Wynk-Music-poster.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
@@ -135,4 +135,4 @@ if PING_IMG_URL:
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
-            START_IMG_URL = "https://images.app.goo.gl/73DLNXW5tahVKoXM9"
+            START_IMG_URL = "https://static.apkdone.me/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
