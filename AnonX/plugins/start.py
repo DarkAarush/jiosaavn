@@ -165,15 +165,15 @@ async def start_comm(client, message: Message, _):
 **𝐂ɦα𐓣𐓣𝖾ᥣ 𝐋𝗂𐓣𝗄:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
 **𝐋𝗂𐓣𝗄:** [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
 
-💖 sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {config.MUSIC_BOT_NAME}"""
+𝐃𝗂𝗌𝖼ⱺ𝗏𝖾𝗋 𝐁𝗒  {config.MUSIC_BOT_NAME}"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="• ʏᴏᴜᴛᴜʙᴇ •", url=f"{link}"
+                            text="𝐘ⱺυ𝐓υᑲ𝖾", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="• sᴜᴩᴩᴏʀᴛ •", url="https://t.me/Cute_Copy_Aarush"
+                            text="🇦𝒂𝒓𝒖𝒔𝒉࿐", url="https://t.me/Cute_Copy_Aarush"
                         ),
                     ],
                 ]
