@@ -9,9 +9,9 @@ from AnonX.utils.database import add_sudo, remove_sudo
 from AnonX.utils.decorators.language import language
 
 # Command
-ADDSUDO_COMMAND = get_command("ADDSUDO_COMMAND")
-DELSUDO_COMMAND = get_command("DELSUDO_COMMAND")
-SUDOUSERS_COMMAND = get_command("SUDOUSERS_COMMAND")
+ADDSUDO_COMMAND = get_command("RAJADDSUDO_COMMAND")
+DELSUDO_COMMAND = get_command("RAJDELSUDO_COMMAND")
+SUDOUSERS_COMMAND = get_command("RAJSUDOUSERS_COMMAND")
 
 
 @app.on_message(
