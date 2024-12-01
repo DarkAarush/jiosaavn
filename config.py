@@ -8,11 +8,11 @@ from pyrogram import filters
 load_dotenv()
 
 API_ID = int(getenv("API_ID", "18499702"))
-API_HASH = getenv("4746d8ccea94d805d466ca382543c913")
+API_HASH = getenv("d4dff36c2c1ebf6f8f6bc044b5bce9c9")
 
-BOT_TOKEN = getenv("6997703356:AAHbEejtyRRcRXP9WD1xLUgtrLyDxJ46isU")
+BOT_TOKEN = getenv("6051187601:AAFVHv00gc0SJhGwxkqmR_4uM8ZA528t7p4")
 
-MONGO_DB_URI = getenv("mongodb+srv://hnyx:wywyw2@cluster0.9dxlslv.mongodb.net/?retryWrites=true&w=majority", None)
+MONGO_DB_URI = getenv("mongodb+srv://EXONTESTMONGO:EXONTESTMONGO@cluster0.bviw7ic.mongodb.net/?retryWrites=true&w=majority", None)
 LOG_GROUP_ID = int(getenv("-1002224506833"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "𝐖𝒚𝒏𝒌 𝑴𝒖𝒔𝒊𝒄 🎶...")
 
