@@ -1,138 +1,185 @@
 import re
-import sys
 from os import getenv
-
+# ------------------------------------
+# ------------------------------------
 from dotenv import load_dotenv
 from pyrogram import filters
-
+# ------------------------------------
+# ------------------------------------
 load_dotenv()
+# ------------------------------------
+# -----------------------------------------------------
+API_ID = int(getenv("API_ID", "18499702"))
+API_HASH = getenv("API_HASH", "d4dff36c2c1ebf6f8f6bc044b5bce9c9")
+# ------------------------------------------------------
+BOT_TOKEN = getenv("BOT_TOKEN", "6051187601:AAFVHv00gc0SJhGwxkqmR_4uM8ZA528t7p4")
+# -------------------------------------------------------
+OWNER_USERNAME = getenv("OWNER_USERNAME","@UTTAM470")
+# --------------------------------------------------------
+BOT_USERNAME = getenv("BOT_USERNAME" , "BABY_MUSIC09_BOT")
+# --------------------------------------------------------
+BOT_NAME = getenv("BOT_NAME" , "╼⃝𖠁 𝐁ʌʙʏ ꭙ 𝐌ᴜsɪᴄ 𖠁⃝╾")
+# ---------------------------------------------------------
+ASSUSERNAME = getenv("ASSUSERNAME" , "╼⃝𖠁 𝐁ʌʙʏ ꭙ 𝐌ᴜsɪᴄ 𖠁⃝╾")
 
-API_ID = int(getenv("18499702"))
-API_HASH = getenv("d4dff36c2c1ebf6f8f6bc044b5bce9c9")
+API_KEY = "abc921ff654bcf7b3faff8f775d781d27d32bfd02d6692eea30249ba781c8b"  # अपना API key यहाँ डालें
+# ---------------------------------------------------------
 
-BOT_TOKEN = getenv("6051187601:AAFVHv00gc0SJhGwxkqmR_4uM8ZA528t7p4")
 
-MONGO_DB_URI = getenv("mongodb+srv://EXONTESTMONGO:EXONTESTMONGO@cluster0.bviw7ic.mongodb.net/?retryWrites=true&w=majority", None)
-LOG_GROUP_ID = int(getenv("-1001868248272"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "𝐖𝒚𝒏𝒌 𝑴𝒖𝒔𝒊𝒄 🎶...")
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://TEAMBABY01:UTTAMRATHORE09@cluster0.vmjl9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+#---------------------------------------------------------------
+#---------------------------------------------------------------
 
-OWNER_ID = list(map(int, getenv("OWNER_ID", "5050578106").split()))
+# ----------------------------------------------------------------
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
+# ----------------------------------------------------------------
 
-HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
-
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/DarkAarush/jiosaavn")
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
-GIT_TOKEN = getenv("GIT_TOKEN", None)
-
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/Cute_Copy_Aarush")
-
-SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
-
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "180"))
-SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
-
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
-AUTO_LEAVE_ASSISTANT_TIME = int(
-    getenv("ASSISTANT_LEAVE_TIME", "5400")
+# ----------------------------------------------------------------
+LOGGER_ID = int(getenv("LOGGER_ID", "-1002043570167"))
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+OWNER_ID = int(getenv("OWNER_ID", "7131351568"))
+# -----------------------------------------------------------------
+# -----------------------------------------------------------------
+# config.py
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
+# ----------------------------------------------------------------
+HEROKU_API_KEY = getenv("HEROKU_API_KEY")
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+UPSTREAM_REPO = getenv(
+    "UPSTREAM_REPO",
+    "https://github.com/BABY-MUSIC/SPOTIFY_MUSIC",
 )
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
+GIT_TOKEN = getenv(
+    "GIT_TOKEN", None
+)  # ----------------------------------------------------------------
+# -------------------------------------------------------------------
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
 
-AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", "True")
 
-PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
 
-YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "5"))
-TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "3"))
+# ------------------------------------------------------------------------
+# -------------------------------------------------------------------------
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/BABY09_WORLD")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+OL6jdTL7JAJjYzVl")
+SOURCE = getenv("SOURCE", "https://github.com/BABY-MUSIC/SPOTIFY_MUSIC")
+CHAT = getenv("CHAT", "https://t.me/chattinghuboo")
+# ------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
-VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "5"))
-SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "50"))
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "50"))
 
-CLEANMODE_DELETE_MINS = int(getenv("CLEANMODE_MINS", "12"))
 
-TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
-TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
-# https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("BQEaSHYArQSTgbqa-Y44-OIAmt5R5vKSTXPg03QExQnkhB6b6yOvjhl6UVmHt91k99Lrk4mGiMLD9VQxeVh8zDclBPweW4l9B2NiS5zobCanhzzspMywuKLeIsMTLn1nQlI3rGJCLxhhBVn-RerjHIFxzxTjE3mHOCwcEuHg7aS8gckaHflps_cfF1jUR5wxmzY7jLs34mRz_VokOp9N0HTJw4qLAPYQXcR_Zncy-GUNxZQ5mxQg7r8kdR19KMuqvjkY478GDqLL4DW6Be-xyhAdoU_6C79bFgph600ZJ2M6ma23jLrI-dC64jjDvJ4sw0lbFHkltZZO8hwxahP5y0QPzKZWCgAAAAHLMGAEAA", None)
-STRING2 = getenv("STRING_SESSION2", None)
-STRING3 = getenv("STRING_SESSION3", None)
-STRING4 = getenv("STRING_SESSION4", None)
-STRING5 = getenv("STRING_SESSION5", None)
 
+
+# --------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
+AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", "9000"))
+SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", "9999999"))
+SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "9999999"))
+# --------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "1c21247d714244ddbb09925dac565aed")
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "709e1a2969664491b58200860623ef19")
+# ----------------------------------------------------------------------------------
+
+
+
+
+# -----------------------------------------------------------------------------------
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 25))
+# ------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------
+TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "5242880000"))
+TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "5242880000"))
+# --------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------
+
+
+
+# ------------------------------------
+# ------------------------------------
+# ------------------------------------
+# ------------------------------------
+STRING1 = getenv("STRING_SESSION", "itn58e84hne-1y7It0ZyIV0FiKKfffO-m6xLkJfn_R1qoaBKt1JVQewfLQ-5SXAQ8buUAGe20r_tCOhHC4WZHi_t-wGBj3VvhV2sMthfSG8UpRDxUs4OLWC9wWhwRPP02ueeMQFjPYb3SGhMXlpNxwELmxox4cKaY0pCxSh-DSzrcC9SdwRMvQPHgvOtN_xdqyWDQhH3PsU6EdhSkgdC1CIoTSxkJt5RpOJBnoqEXwOYIBJ127yTHhwbWe2OifwD-WLnchgcFpj3eDDyJCN0WJO3jaOJKQguo3Hshi6Hs1aXf50E2k472XFult2TOWyyOWitUMzMvZT5Ch2wdwAAAAGpD8oQAA")
 BANNED_USERS = filters.user()
-YTDOWNLOADER = 1
-LOG = 2
-LOG_FILE_NAME = "logs.txt"
 adminlist = {}
 lyrical = {}
-chatstats = {}
-userstats = {}
-clean = {}
+votemode = {}
 autoclean = []
+confirmer = {}
 
+# ------------------------------------
+# ------------------------------------
+# ------------------------------------
+# ------------------------------------
 
-START_IMG_URL = getenv("START_IMG_URL", "https://static.apkdone.me/wp-content/uploads/2020/10/Wynk-Music-poster.jpg")
-
-PING_IMG_URL = getenv(
-    "PING_IMG_URL",
-    "https://www.medianews4u.com/wp-content/uploads/2019/05/Tips.jpg",
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+START_IMG_URL = getenv(
+    "START_IMG_URL", "https://files.catbox.moe/xhpqtp.jpg"
 )
+PING_IMG_URL = getenv(
+    "PING_IMG_URL", "https://telegra.ph/file/fd827f9a4fe8eaa3e8bf4.jpg"
+)
+PLAYLIST_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
+STATS_IMG_URL = "https://telegra.ph/file/d30d11c4365c025c25e3e.jpg"
+TELEGRAM_AUDIO_URL = "https://telegra.ph/file/c832e84cd991c865c7e4f.jpg"
+TELEGRAM_VIDEO_URL = "https://telegra.ph/file/e575ae40d6635250974e1.jpg"
+STREAM_IMG_URL = "https://telegra.ph/file/03efec694e41e891b29dc.jpg"
+SOUNCLOUD_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
+YOUTUBE_IMG_URL = "https://telegra.ph/file/4dc854f961cd3ce46899b.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
 
-PLAYLIST_IMG_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
-
-GLOBAL_IMG_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
-
-STATS_IMG_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTerDS_Y-E21fTDJHNcpkuUHEA152aQUUxvcQ&usqp=CAU"
-
-TELEGRAM_AUDIO_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTerDS_Y-E21fTDJHNcpkuUHEA152aQUUxvcQ&usqp=CAU"
-
-TELEGRAM_VIDEO_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
-
-STREAM_IMG_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
-
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
-
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
-
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
-
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
-
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
-
-
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
 def time_to_seconds(time):
     stringt = str(time)
-    return sum(
-        int(x) * 60**i
-        for i, x in enumerate(reversed(stringt.split(":")))
-    )
+    return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
 DURATION_LIMIT = int(time_to_seconds(f"{DURATION_LIMIT_MIN}:00"))
-SONG_DOWNLOAD_DURATION_LIMIT = int(
-    time_to_seconds(f"{SONG_DOWNLOAD_DURATION}:00")
-)
 
-
-if UPSTREAM_REPO:
-    if not re.match("(?:http|https)://", UPSTREAM_REPO):
-        print(
-            "[ERROR] - Your UPSTREAM_REPO url is wrong. Please ensure that it starts with https://"
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+if SUPPORT_CHANNEL:
+    if not re.match("(?:http|https)://", SUPPORT_CHANNEL):
+        raise SystemExit(
+            "[ERROR] - Your SUPPORT_CHANNEL url is wrong. Please ensure that it starts with https://"
         )
-        sys.exit()
 
-if PING_IMG_URL:
-    if PING_IMG_URL != "assets/Ping.jpeg":
-        if not re.match("(?:http|https)://", PING_IMG_URL):
-            PING_IMG_URL = "https://www.medianews4u.com/wp-content/uploads/2019/05/Tips.jpg"
-
-if START_IMG_URL:
-    if START_IMG_URL != "assets/Ping.jpeg":
-        if not re.match("(?:http|https)://", START_IMG_URL):
-            START_IMG_URL = "https://static.apkdone.me/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
+if SUPPORT_CHAT:
+    if not re.match("(?:http|https)://", SUPPORT_CHAT):
+        raise SystemExit(
+            "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
+        )
+# ---------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
