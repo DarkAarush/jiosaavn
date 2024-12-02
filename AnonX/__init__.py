@@ -1,37 +1,27 @@
-from AnonX.core.bot import AnonXBot
+from AnonX.core.bot import AnonXbot
 from AnonX.core.dir import dirr
 from AnonX.core.git import git
 from AnonX.core.userbot import Userbot
 from AnonX.misc import dbb, heroku
-from aiohttp import ClientSession
-
+from pyrogram import Client
+from SafoneAPI import SafoneAPI
 from .logging import LOGGER
 
-
 dirr()
-
 git()
-
 dbb()
-
 heroku()
 
-sudo()
-
-# Clients
-app = AnonXBot()
-
+app = AnonX()
+api = SafoneAPI()
 userbot = Userbot()
-
 
 from .platforms import *
 
-YouTube = YouTubeAPI()
-Carbon = CarbonAPI()
-Spotify = SpotifyAPI()
 Apple = AppleAPI()
-Resso = RessoAPI()
+Carbon = CarbonAPI()
 SoundCloud = SoundAPI()
+Spotify = SpotifyAPI()
+Resso = RessoAPI()
 Telegram = TeleAPI()
-
-aiohttpsession = ClientSession()
+YouTube = YouTubeAPI()
