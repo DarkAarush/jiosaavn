@@ -18,7 +18,7 @@ MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "𝐖𝒚𝒏𝒌 𝑴𝒖𝒔𝒊𝒄
 
 OWNER_ID = list(map(int, getenv("OWNER_ID", "5050578106").split()))
 
-HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
+HEROKU_API_KEY = getenv("HRKU-5750435b-e69a-4751-9d27-1037a3dafa0d", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/DarkAarush/Aarush")
