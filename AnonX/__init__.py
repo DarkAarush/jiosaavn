@@ -2,7 +2,7 @@ from AnonX.core.bot import AnonXBot
 from AnonX.core.dir import dirr
 from AnonX.core.git import git
 from AnonX.core.userbot import Userbot
-from AnonX.misc import dbb, heroku
+from AnonX.coro.misc import dbb, heroku
 from pyrogram import Client
 from SafoneAPI import SafoneAPI
 from .logging import LOGGER
