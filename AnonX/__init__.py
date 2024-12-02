@@ -12,7 +12,7 @@ git()
 #dbb()
 #heroku()
 
-app = AnonX()
+app = AnonXBot()
 api = SafoneAPI()
 userbot = Userbot()
 
