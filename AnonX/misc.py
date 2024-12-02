@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from BABYMUSIC.core.mongo import mongodb
+from AnonXBot.core.mongo import mongodb
 
 from .logging import LOGGER
 
