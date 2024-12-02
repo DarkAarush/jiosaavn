@@ -10,7 +10,7 @@ from .logging import LOGGER
 dirr()
 git()
 #dbb()
-heroku()
+#heroku()
 
 app = AnonX()
 api = SafoneAPI()
